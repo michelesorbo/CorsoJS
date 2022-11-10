@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Variabili</title>
+</head>
+
+<body>
+
+    <h1>Le variabili in JavaScript</h1>
+
+    <script>
+
+        //Commento di riga
+
+        /*
+            Commento di blocco
+        */
+
+        /*
+        1) il nome delle variabili deve essere descrittivo
+        2) il nome delle variabili non possono contenere spazzi
+        3) le varibili iniziano sempre con una lettera minuscola
+        4) non usare mai lettere accentate
+        5) non usare nomi del programma es: for let var string while if else
+       */
+        let nome = "Michele" //Stringa - Dichiaro e inizializzo la variabile
+        let eta = 43 //Numerico
+        let cognome //Dichiaro la variabile
+        cognome = "Sorbo" //Inzializzo la variabile
+        console.log(cognome)
+
+        //Tipi di dati da utilizza nelle variabili
+        let stringa = "Un nome o un testo" //Variabile di tipo stringa
+        let numerico = 34 //Variabile di tipo numerico
+        let num_sci = 9007199254720n //Variabili di tipo BigInt
+        let booleane = true //Variabili di tipo boolenao true o false
+
+        let esempio = true
+        console.log(typeof (esempio))
+
+        esempio = "Il mio esempio"
+        console.log(typeof (esempio))
+
+        //Come visualizzare le variabili 
+
+        //Concatenare le variabili
+        console.log(nome + cognome) //Concatenazione ra stringhe
+        console.log("Nome inserito: " + nome + " Cognome inserito: " + cognome)
+
+        //Concatenazione tra Numerici
+        console.log(eta + " " + numerico) //Devo inserire una stringa all'interno
+
+        //Operatori in JavaScript
+        let somma
+        somma = 5 + 7
+        console.log(somma)
+
+        let sottrazione
+        sottrazione = 9 - 12.4
+        console.log(sottrazione)
+
+        let divisione
+        divisione = 4 / 2 //Mai dividere per 0
+        console.log(divisione)
+
+        let moltiplicazione
+        moltiplicazione = 5 * 3
+        console.log(moltiplicazione)
+
+        //Il CAST delle variabili
+        let n1 = 5
+        let n2 = "4"
+
+        let risultato = n1 + Number(n2) //CAST di una stringa in numerico
+        let ris_stringa = String(n1) + n2 //Cast di un Numeric in String
+        console.log(risultato)
+        console.log(ris_stringa)
+
+        //window.alert("Attenzione " + risultato)
+        let valore_prompt = prompt("Dammi un valore")
+        console.log(valore_prompt)
+        console.log(typeof(valore_prompt))
+
+        //Esercizio fare la somma di due numeri presi da Prompt
+        let num1 = prompt("Inserisci il primo numero")
+        let num2 = prompt("Inserisci il secondo numero")
+        risultato = Number(num1) + Number(num2)
+        console.log("La somma è :" + risultato)
+
+        //Come prendere il risultato direttamnte in Numeric
+        let num3 = Number(prompt("Dammi un numero"))
+        let num4 = +prompt("Dammi un numero") //Forma abbreviata
+        console.log(typeof(num4))
+
+
+        //LE COSTANTI
+        //Vanno create con la parola chiave "const" e vanno scritte in MAIUSCOLO
+        //Devono essere subito inizializzate
+        //Le costanti non possono essere riassegnate
+        const PGRECO = 3.14
+        const INTERESSI = 3
+        const COLORE_BASE = "red"
+        console.log(PGRECO)
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+
+    <h1>Gli Array</h1>
+    
+    <script>
+        let ar_numeri = [12,34,5,7,3,6,45,32] //L'indici dell'array inizia da 0
+        let ar_misto = [12, true, "Ciao", 12, "JavaScript"]
+        console.log(ar_misto[2])
+
+        //Per cambiare il valore di un elemento devo conoscere l'indice
+        ar_misto[2] = "Corso"
+        console.log(ar_misto[2])
+
+        //Proprietà degli array
+        console.log(ar_numeri.length) //Lunghezza dell'array (quanti valori sono presenti nell'array)
+        console.log(ar_numeri[ar_numeri.length-1]) //Stampo l'ultima posizione di un array
+        console.log(ar_misto[2] + ar_misto[4])
+
+        //Stampare il contenuto di un array
+        ar_numeri.forEach(pippo => {
+            console.log(pippo)
+        })
+
+        //ES. Sommare gli elemnti di un array NUMERICO
+        //Stampare la somma e la Media
+        let somma = 0 //Ricordare la somma
+        ar_numeri.forEach(el => {
+            somma = somma + el
+        })
+
+        console.log("La sommadegli elementi è: " + somma) //Stapo la somma
+        let media = somma / ar_numeri.length
+        console.log("La media è: " + media)
+
+        //Creare un array vuoto
+        let alunni = [] //Dichiaro un array vuoto
+
+        //Per inserire un elemnto alla fine di un array si usa PUSH
+        alunni.push("Michele")
+        alunni.push("Elisabetta")
+        alunni.push("Francesco")
+        console.log(alunni)
+
+        //Per inserire gli elemnti all'inizio di un array uso UNSHIFT
+        alunni.unshift("Fabiana")
+        console.log(alunni)
+
+        //Per eliminare gli elemnti di un array partendo dalla fine
+        alunni.pop() //Elimina l'ultimo elemento dell'array
+        console.log(alunni)
+
+        //Per eliminare il primo elemento di un array utilizzo SHIFT
+        alunni.shift() //Elimi il primo elemento
+        console.log(alunni)
+
+        /*
+        Es1. Creare un array vuoto e poi riempirlo con 4 valori numerici presi da prompt
+        e stamparne la somma
+        */
+        let ar_es1 = [] //Creo Array Vuoto
+        //Prendo i 4 elementi da prompt
+        ar_es1.push(+prompt("Inserisci un valore"));
+        ar_es1.push(+prompt("Inserisci un valore"));
+        ar_es1.push(+prompt("Inserisci un valore"));
+        ar_es1.push(+prompt("Inserisci un valore"));
+
+        let somma_es1 = 0 //Dichiaro la variabile per ricordare la somma di tutti gli elemnti inseriti
+        ar_es1.forEach(el => {
+            somma = somma + el
+        })
+
+        console.log("La somma degli elemnti inseriti è: " + somma)
+    </script>
+</body>
+</html>
