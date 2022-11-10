@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF ELSE</title>
+</head>
+<body>
+
+    <h1>IF ELSE</h1>
+    
+    <script>
+
+        let nome = "Michele"
+
+        if(nome.toLocaleLowerCase() == "michele"){
+            console.log("I nomi sono uguali")
+        }else{
+            console.log("I nomi sono diversi")
+        }
+
+        //Operatori di comparazione
+        /*
+            < Minore Es: 20 < 10 (FALSE)
+            > Maggiore Es: 20 > 10 (TRUE)
+            <= Minore Uguale 20 <= 20 (TRUE)
+            >= Maggiore Ugulae
+            == Equivalente (Da non confondere con = che sta per assegnazione) Es: 8 == 10 (FALSE)
+            === Identico, stesso tipo e stesso valore
+            != Non Equivalente (Diverso)
+            !== Non Idedentico
+            ! negazione
+        */
+
+        if(20 != 20){
+            console.log("Si")
+        }else{
+            console.log("No")
+        }
+
+        //Operatori di incremento e decremento
+        /*
+            + Somma Es: 2 + 2 = 4
+            - Sottrazione Es: 4 - 2 = 2
+            * Moltiplicazione Es: 5 * 5 = 25
+            / Divisione Es: 40 / 2 = 20 (Attenzione alle divisioni per 0)
+            % Modulo (o "Resto della divisione") Es: 35 % 3 = 2
+            ++ Incremento Es: i = 9; i++ > 10
+            -- Decremento Es: i = 9; i-- > 8
+        */
+       let somma = 3
+       let i = 4
+
+       somma += i //somma = somma + i
+       console.log(somma)
+
+       //Esempio: Verificare se un numero è pari o dispari prendere il numero da tastiera
+       let numero = +prompt("inserisci un numero e ti dirò se è pari o dispari")
+
+       if(numero%2 == 0){
+        console.log("Numero Pari")
+       }else{
+        console.log("Numero Dispari")
+       }
+
+
+    //Es: Chiedere all'utente di inserire una parole. Se la parola è più lunga di 5 caratteri 
+    //dire che è troppo lunga altrimenti stamparla in console
+    let parola = prompt("Inserisi una parola max 5 caratteri")
+
+    if(parola.length <= 5){
+        console.log(parola)
+    }else{
+        console.log("Parola troppo lunga")
+    }
+
+    //Condizioni multiple IF ELSE IF ESLE
+    let nome2 = "Filippo"
+
+    if(nome2 == "Filippo"){
+        console.log("Studente")
+    }else if(nome2 == "Michele"){
+        console.log("Docente")
+    }else if(nome2 == "Francesco"){
+        console.log("Studente")
+    }else{
+        console.log("non ti ocnosco")
+    }
+
+    /****************  Menu dei dolci ****************************
+         Scrivi un programma che dato il seguente menu (da stampare):
+            MENU:
+            1. Tiramisù
+            2. Torta della nonna
+            3. Cheesecake alla nutella
+            4. Macedonia
+        Prenda in input un valore numerico che rappresenti la scelta e restituisca:
+            - se la scelta non è tra quelle elencate la scritta 'Dolce non disponibile',
+            - altrimenti la scelta effettuata 'Hai scelto il dolce X'.
+        Esempi:
+            Input: scelta = 4
+            Output: Hai scelto il dolce Macedonia
+            Input: scelta = 7
+            Output: Dolce non disponibile
+        ***********************************************************/
+
+        let dolce = +prompt("MENU:\n1. Tiramisù\n2. Torta della Nonna\n3. Cheescake alla Nutella\n4. Macedonia")
+
+        if(dolce == 1){
+            console.log("Hai scelto Tiramisù")
+        }else if(dolce == 2){
+            console.log("Hai scelto Torta della nonna")
+        }else if(dolce == 3){
+            console.log("Hai scelto Cheesecake alla Nutella")
+        }else if(dolce == 4){
+            console.log("Hai scelto Macedonia")
+        }else{
+            console.log("Scelta non valida")
+        }
+
+       //Gli operatori logici
+       /*
+       && AND operato e tutte le condizioni devono essere vera
+       || OR almeno una condizione deve essere vera
+       */
+
+       if(nome2 == "Francesco" || nome2 == "Filippo"){
+            console.log("Studenti")
+       }else{
+        console.log("Non ti conosco")
+       }
+
+       /**********************  Fai il professore  ******************************************************
+         Scrivi un programma che converta un voto numerico (v) in un giudizio seguendo questi parametri:
+            v < 18: insufficiente
+            18 >= v < 21: sufficiente
+            21 >= v < 24: buono
+            24 >= v < 27: distinto
+            27 >= v <= 29: ottimo
+            v = 30: eccellente
+            se il voto è superiore a 30 dire che non è presente
+        Utilizza costrutto If Else.
+        Esempio:
+            Input: v = 29
+            Output: Ottimo
+        *******************************************************************************************************/
+
+        let voto = Number(prompt("Che votazione numerica hai ricevuto?"));
+        
+        if(voto < 18){
+            console.log("Insufficiente")
+        } else if(voto >= 18 && voto < 21){
+            console.log("Sufficiente")
+        } else if(voto >= 21 && voto < 24){
+            console.log("Buono")
+        } else if(voto >= 24 && voto < 27) {
+            console.log("Distinto")  
+        } else if(voto >= 27 && voto < 29) {
+            console.log("Ottimo")  
+        } else if(voto == 30){
+            console.log("Eccellente")
+        } else {
+            console.log('Ma che hai scritto?')
+        }
+
+        /********************
+         * Dato tre numeri dire quale è il maggiore
+        **********************/
+
+        //Operatore Ternario
+        let x = -3
+        let y = x > 0 ? x : -x
+        // if (x > 0)
+        //      y = 3
+        // else 
+        //    y = -x
+        console.log(y)
+
+        //Assegan un valore se la condizione è verificata
+ 
+    </script>
+</body>
+</html>

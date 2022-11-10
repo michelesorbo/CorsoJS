@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stringhe</title>
+</head>
+<body>
+
+    <h1>Le Stringhe</h1>
+
+    <p id="par"></p>
+    
+    <script>
+        let str = "Corso di JavaScript presentato Adecco"
+        console.log(str) //Spampo in console la stringa
+
+        console.log(str.length)//Restituisce il numero di caratteri della stringa
+        console.log(str[0]) //Spampo il primo carattere di una stringa
+        console.log(str[str.length-1]) //Stampo ultomo carattere di una stringa
+
+        let str2 = "       Ciao     "
+        console.log(str2.length)
+        console.log(str2.trim()) //Serve a togliere gli spazzi all'inizio e alla fine della stringa
+
+        let nome = "Michele"
+        console.log(nome.toLocaleLowerCase()) //Convertire tutto in minuscolo
+        console.log(nome.toLocaleUpperCase()) //Convertire tutto in MAIUSCOLO
+
+        //Cercare un testo in una stringa e cambiarlo
+        console.log(str.replace("JavaScript", "PHP"))
+
+        //Selezionare il paragrafo da HTML
+        const par = document.getElementById("par")
+        par.innerHTML = "<h3>" + str + "</h3>"
+        par.style.color = "red"
+    </script>
+</body>
+</html>

@@ -67,10 +67,10 @@
         */
         let ar_es1 = [] //Creo Array Vuoto
         //Prendo i 4 elementi da prompt
-        ar_es1.push(+prompt("Inserisci un valore"));
-        ar_es1.push(+prompt("Inserisci un valore"));
-        ar_es1.push(+prompt("Inserisci un valore"));
-        ar_es1.push(+prompt("Inserisci un valore"));
+        // ar_es1.push(+prompt("Inserisci un valore"));
+        // ar_es1.push(+prompt("Inserisci un valore"));
+        // ar_es1.push(+prompt("Inserisci un valore"));
+        // ar_es1.push(+prompt("Inserisci un valore"));
 
         let somma_es1 = 0 //Dichiaro la variabile per ricordare la somma di tutti gli elemnti inseriti
         ar_es1.forEach(el => {
@@ -78,6 +78,43 @@
         })
 
         console.log("La somma degli elemnti inseriti è: " + somma)
+
+        //Es. dato l'array corsi crare un nuovo array corsi_revers con l'ordine dei corsi inverso
+        let corsi = ["JAVA", "C++", "Python", "PHP"]
+        let corsi_revers = [] //PHP Python C++ JAVA
+        /*
+        1) el = JAVA ar = JAVA
+        2) el = C++ ar = C++, JAVA
+        3) el = Python ar = Python, C++, JAVA
+        */
+        corsi.forEach(el =>{
+            corsi_revers.unshift(el)
+        })
+
+        console.log(corsi_revers)
+
+        //Convertire un testo in array
+        let testo = "1,34,5,67"
+        let testo_ar = testo.split(",")
+        console.log(testo_ar)
+
+        let nomi = "Michele Simona Valerio Francesco"
+        let nomi_ar = nomi.split(" ")
+        console.log(nomi_ar)
+
+        //Cercare un valore in un array
+        let persone = ["Michele", "Simona", "Francesco"]
+        console.log(persone.includes("simona"))
+        //includes ritorna true se l'elemento è presente false se non è presente
+
+        //Ordinare un array
+        console.log(persone.sort())
+
+
+        //Per cancellare un elemento nell'array si usa SLICE
+        console.log(persone.slice(1, 2))
+
+        
     </script>
 </body>
 </html>
