@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo For</title>
+</head>
+<body>
+
+    <h1>Ciclo For</h1>
+
+    <h2>La tabellina</h2>
+    <p id="tabellina"></p>
+    <h2>Esercizio riconosci la decina</h2>
+    <div id="par2"></div>
+    <h2>Cicli Annidati</h2>
+    <div id="par3"></div>
+    <script>
+        // console.log("1")
+        // console.log("2")
+        // console.log("3")
+        // console.log("4")
+        // for(let i = 1; i <= 10; i++ ){
+        //     console.log(i)
+        // }
+
+        // console.log("Fine Ciclo FOR")
+
+        //Es 1. Fare la somma dei primi 100 numeri
+        let somma_100 = 0;
+
+        for(let i = 1; i <= 100; i++){
+            somma_100 += i // somma_100 = somma_100 + i
+        }
+        console.log("La somma dei primi 100 numeri è: " + somma_100)
+
+        //Es 2. Chiedere 5 numeri da tastiera e fare la somma dei numeri inseriti
+        // let somma_es2 = 0;
+
+        // for(let i = 1; i <= 5; i++){
+        //     let n = +prompt("Dammi il " + i + "° numero da sommare")
+        //     somma_es2 += n
+        // }
+
+        // console.log(somma_es2)
+
+        //Es 3. Stampara e video i primi 10 risultati della tabellina del 5
+        // for(let i = 1; i <= 10; i++){
+        //     console.log(i * 5)
+        // }
+
+        //Es 4. Chiedere quale tabellina stapare a video
+        // let tabellina = +prompt("Quale Tabellina vuoi visulaizzare?")
+        // let tab_inizio = +prompt("Dove vuoi iniziare")
+        // let tab_fine = +prompt("Dove vuoi finire")
+        // const par_tabellina = document.getElementById("tabellina")
+
+        // for(let i = tab_inizio; i <= tab_fine; i++){
+        //     //console.log(i + " x " + tabellina + " = " + (i * tabellina))
+        //     par_tabellina.innerHTML += i + " x " + tabellina + " = " + (i * tabellina) + "<br>"
+        // }
+
+        //Es 5. Indovina il numero
+        // let numeroDaIndovinare = Math.floor(Math.random() * 4) + 1
+
+        // console.log(numeroDaIndovinare)
+
+        // for(let i = 1; i <= 3; i++){
+        //     let num = +prompt("Indovina il numero hai 3 tentativi")
+        //     if(num == numeroDaIndovinare){
+        //         console.log("Bravo hai indovinato")
+        //         break //Termina il ciclo
+        //     }else{
+        //         console.log("Ritenta")
+        //     }
+        // }
+
+        //Con for al contrario
+        // let numeroDaIndovinare = Math.floor(Math.random() * 4) + 1
+        // console.log(numeroDaIndovinare)
+
+        // for(let i = 3; i >= 1; i--){
+        //     let num = +prompt("Indovina il numero hai ancora " + i +" tentativi")
+        //     if(num == numeroDaIndovinare){
+        //         console.log("Bravo hai indovinato")
+        //         break //Termina il ciclo
+        //     }else{
+        //         console.log("Ritenta")
+        //     }
+        // }
+
+
+        /********* Rincorri la decina ******************************************
+         Scrivi un programma che che stampi i numeri da 1 a 100 andando a capo ogni 10.
+        Esempio:
+            Output: 1 2 3 4 5 6 7 8 9 10
+                    11 12 13 14 15 16 17 18 19 20
+                    21 22 23 24 25 26 27 28 29 30
+                    31 32 33 34 35 36 37 38 39 40
+                    41 42 43 44 45 46 47 48 49 50
+                    51 52 53 54 55 56 57 58 59 60
+                    61 62 63 64 65 66 67 68 69 70
+                    71 72 73 74 75 76 77 78 79 80
+                    81 82 83 84 85 86 87 88 89 90
+                    91 92 93 94 95 96 97 98 99 100
+        Consiglio:
+        Per andare a capo usa '<br>'. Numero % 10 == 0
+        *********************************************************************/
+        const par2 = document.getElementById("par2")
+        
+        // for(let i = 1; i <= 100; i++){
+        //     par2.innerHTML += i + " "
+        //     if(i%10 == 0){
+        //         par2.innerHTML += "<br>"
+        //     }
+        // }
+
+
+        //Chiedere 5 numeri e dire se il numero inserito è pari o dispari 
+        // a fine ciclo dire qunti numeri sono pari e quanti sono dispari
+        // let pari = 0;
+        // let dispari = 0;
+
+        // for(let i = 1; i<=5; i++){
+        //     let n = +prompt("Dammi un numero")
+        //     if(n%2 == 0){
+        //         pari++;
+        //         console.log("Pari")
+        //     }else{
+        //         dispari++
+        //         console.log("Dispari")
+        //     }
+        // }
+
+        // console.log("Hai inserito "+pari+" numeri pare e "+dispari+" numeri dipari")
+
+
+        //Cicli con array Es 6
+        // let somma_es6 = 0
+        // let ar_es6 = []
+
+        // for(let i = 1; i <= 3; i++){
+        //     let n = +prompt("Inserisci il " + i + "° numero")
+        //     ar_es6.push(n)
+        //     somma_es6 += n //Sommo direttamente dal ciclo
+        // }
+
+        // console.log("Hai inserito questi numeri: " + ar_es6 + " e la loro somma è: " + somma_es6)
+
+        //let str = prompt("Scrivi quello che vuoi") //Prendere da tastiera la frase
+
+        // par2.innerHTML = str[0] + "<br>"
+        // par2.innerHTML += str[1] + "<br>"
+        // par2.innerHTML += str[2] + "<br>"
+
+        // for(let i = 0; i < str.length; i++){
+        //     par2.innerHTML += str[i] + "<br>"
+        // }
+
+        //Scrivere un programma che legge 5 numeri da tastiera e ne restituisce il minimo
+        // let min; //Ricordo il valore più piccolo che trovo
+        // let n = +prompt("inserisci 3 numeri e ti dirò il minore")
+        // min = n;
+        // for(let i = 2; i <= 5; i++){
+        //     n = +prompt("inserisci un nuovo numero")
+        //     if(n < min){
+        //         min = n
+        //     }
+        // }
+
+        // console.log("Il valore minimo inseri è: "+min)
+
+        //Dato l'array trovare l'elemento minimo senza usare i metodi dell'array
+        let ar_numeri = [7,8,54,2,36] 
+        //Con i metodi
+
+        // let ar_ordinato = ar_numeri.sort()
+        // console.log(ar_numeri.sort())
+        // console.log("Elemento minore: " + ar_ordinato[0])
+        // console.log("Elemento maggiore: " + ar_ordinato[ar_ordinato.length-1])
+
+        let min = ar_numeri[0] //Imposto il primo elemento dell'array come minimo
+        let max = ar_numeri[0]
+        for(let i = 1; i < ar_numeri.length; i++){
+            if(ar_numeri[i] < min){
+                min = ar_numeri[i]
+            }
+            if(ar_numeri[i] > max){
+                max = ar_numeri[i]
+            }
+        }
+
+        console.log("L'elemento minimo è: " + min)
+        console.log("L'elemento massimo è: " + max)
+
+        //Scrivere un programma che legge 5 numeri da tastiera e ne restituisce il minimo
+        // let min; //Ricordo il valore più piccolo che trovo
+        // let n = +prompt("inserisci 3 numeri e ti dirò il minore")
+        // min = n;
+        // for(let i = 2; i <= 5; i++){
+        //     n = +prompt("inserisci un nuovo numero")
+        //     if(n < min){
+        //         min = n
+        //     }
+        // }
+
+        // console.log("Il valore minimo inseri è: "+min)
+
+        // Scrivere un programma che Lancia un numero di dadi a sei facce 
+        // scelto dall’utente, mostra i risultati e dice quante volte è uscito il 6 e a quale lancio
+
+        // let dadi = +prompt("Quanti dadi vuoi lanciare?")
+        // let sei = 0; //Vado a contare quante volte esce il numero 6
+
+        // for(let i = 1; i <= dadi; i++){
+        //     let lancio = Math.floor(Math.random() * 6) + 1
+        //     console.log(lancio)
+        //     if (lancio == 6) {
+        //         sei++
+        //     }
+        // }
+
+        // console.log("Hai fatto "+sei+" sei")
+
+        //Versione con ricordo del lancio e somma toale dei lanci
+        // let dadi = +prompt("Quanti dadi vuoi lanciare?")
+        // let sei = []; //Vado a contare quante volte esce il numero 6
+        // let somma_dadi = 0
+
+        // for(let i = 1; i <= dadi; i++){
+        //     let lancio = Math.floor(Math.random() * 6) + 1
+        //     console.log(lancio)
+        //     somma_dadi += lancio
+        //     if (lancio == 6) {
+        //         sei.push(i) //Ricordo il numero del lancio in cui è uscito 6 come risultato del lancio
+        //     }
+        // }
+
+        // console.log("La somma totale dei lanci è: "+somma_dadi)
+        // console.log("Il sei è uscito "+sei.length+" volte")
+        // sei.forEach(n =>{
+        //     console.log("Al lancio n° "+n)
+        // })
+
+
+
+        //CICLI ANNIDATI
+        const par3 = document.getElementById("par3")
+        for(let i = 1; i <= 3; i++){
+            for(let j = 1; j <= 5; j++){
+                //par3.innerHTML += i + " x " + j + " = " + (i*j) + "<br>"
+                par3.innerHTML += "Valore di i: " + i + " Valore di j: "+ j + "<br>"
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

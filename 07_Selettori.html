@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Selettori</title>
+    <style>
+        .sub_title{
+            color: red;
+        }
+
+        .sub_title2 {
+            color: chocolate;
+            font-size: 25;
+        }
+
+        #div_1{
+            color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="titolo">Titolo della Pagina</h1>
+    <div id="div_1">Sono il div</div>
+    <p>Sono il primo p della pagina</p>
+    <h2 class="sub_title">Sono il Sottotitolo della pagina</h2>
+    <h2>Sono il secondo sottotitolo</h2>
+    <p>sono il 1 paragrafo</p>
+    <p>sono il 2 paragrafo</p>
+    <p>sono il 3 paragrafo</p>
+    <p>sono il 4 paragrafo</p>
+    <input type="text" id="testo" name="testo">
+    <button id="btn">Cliccami</button>
+
+    <script>
+        //Selezionare gli elementi di una pagina
+        const titolo = document.getElementById("titolo") //Posso solo prendere elementi che hanno l'attributo id settato
+        const div_1 = document.querySelector("#div_1") //L'elemnto con div
+        const sub_title = document.querySelector(".sub_title") //L'elemento con class
+        const body = document.querySelector("body") //Prendo il tag BODY
+        const pars = document.querySelectorAll("p") //Selezionare tutti i tag P
+        const testo = document.querySelector("#testo")
+        const btn = document.querySelector("#btn")
+
+        //Come scorrere tutti gli elementi p della pagina
+        console.log(pars.length)
+        //pars[1].style.color = "red"
+        pars.forEach(par =>{
+            par.style.color = "red"
+        })
+
+        div_1.innerHTML = "CIao da JS" //Scrivere del testo nel div
+        div_1.style.color = "blue" //Posso cambiare lo stile
+
+        sub_title.className = "sub_title2" //Cambiare la classe del tag
+
+        //Catturare gli eventi dal documento
+        //Catturare il clik del pulsante
+        btn.addEventListener("click", () => {
+            // if(testo.value == "Francesco"){
+            //     div_1.innerHTML = "Ciao Francesco"
+            // }else{
+            //     div_1.innerHTML = "Non sei Francesco"
+            // }
+            if(testo.value.length < 6){
+                window.alert("Password troppo corta")
+                testo.value = ""
+            }
+        })
+
+        // testo.addEventListener("keypress", () => {
+        //     if(testo.value != "a" || testo.value != "b" || testo.value != "c"){
+        //         window.alert("Puoi inserire solo a - b - c")
+        //     }
+        // })
+    </script>
+    
+</body>
+</html>

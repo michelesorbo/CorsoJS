@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo WHILE</title>
+</head>
+<body>
+
+    <h1>Ciclo While</h1>
+    
+    <script>
+        //FOR stamap i primi 10 numeri
+        // for(let i = 1; i <= 10; i++){
+        //     console.log(i)
+        // }
+
+        //WHILE stampa i primi 10 numeri
+        // let i = 1 //Partenza
+
+        // while(i <= 10){ //Condizione
+        //     console.log(i)
+        //     i++ //Incremento
+        // }
+
+        //Es 1.Fai la somma dei numeri inseriti da tastiera ti fermi quando inserisci 0
+        //Da fare a casa ricordare i numeri inseriti
+        //Al termine fare anche la media
+        // let somma_es1 = 0
+        // let num = +prompt("Inserisci un numero, 0 per teminare")
+
+        // while(num != 0){
+        //     somma_es1 += num
+        //     num = +prompt("Inserisci un numero, 0 per teminare")
+        // }
+
+        // console.log("La somma è: " + somma_es1)
+
+        let ar_classe = []
+
+        // let alunno = prompt("Inserisci un alunno, fine per terminare")
+
+        // while(alunno.toLocaleLowerCase() != "fine"){
+        //     ar_classe.push(alunno)
+        //     alunno = prompt("Inserisci un alunno, fine per terminare")
+        // }
+
+        // console.log(ar_classe)
+
+        //IL COSTRUTTO DO WHILE
+        //DO WHILE esegue il cilo while almeno una volta
+
+        do{
+            var alunno = prompt("Inserisci un alunno, fine per terminare")
+            
+            if(alunno.toLocaleLowerCase() != "fine"){
+                ar_classe.push(alunno)
+            }
+            
+        }while(alunno.toLocaleLowerCase() != "fine")
+
+        console.log(ar_classe)
+
+
+    </script>
+</body>
+</html>
