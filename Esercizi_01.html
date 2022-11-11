@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizi 1</title>
+</head>
+<body>
+    <p></p>
+
+    <script>
+        const par = document.querySelector('p');
+        
+         //ESERCIZIO
+        /*
+        Quanti anni ha?
+        Scrivi un programma che dato l'anno corrente e un anno di nascita determini:
+            - l'età della persona,
+            - quanti anni sono necessari per raggiungere i 100 anni
+        Restituisca in output entrambi i risultati.
+        
+        Esempio:
+            Input: anno corrente = 2018, anno di nascita = 1991
+            Ouput: età = 27, anni mancanti ai 100 = 73
+        
+        //Soluzione
+        let annoCorrente = Number(prompt('Inserisci anno corrente'));
+        let annoNascita = Number(prompt('Inserisci anno di nascita'));
+
+        let eta = annoCorrente - annoNascita;
+        let restante = 100 - eta;
+
+        par.textContent = "età: " + eta + " anni mancanti: " + restante;
+        
+        */
+
+        /************************** Conta il tempo *******************************
+         Scrivi un programma che dato un numero di secondi, calcoli la quantità  di ore, 
+         minuti e secondi corrispondenti e poi stampi il risultato. 
+         L'output avrà solo numeri interi.
+        Esempio:
+            Input: 12560
+            Output: 3 ore, 29 minuti e 20 secondi.
+        Consigli:
+        In un'ora ci sono 60 minuti, in un minuto 60 secondi. Quindi quanti secondi 
+        ci sono in un'ora? 3600 secondi ;)
+        *************************************************************************/
+
+        let numeroInSecondi = Number(prompt("Quanti secondi vuoi convertire?"));
+        let ore = Math.floor(numeroInSecondi/3600); //Mi sono calcolato le ore
+        let restoMinuti = numeroInSecondi % 3600;
+        let minuti = Math.floor(restoMinuti / 60); //Vado a calcolare i minuti
+        let secondi = restoMinuti % 60; //Ricavo i secondi
+
+        par.innerHTML = "Ore: " + ore + "<br>Minuti: " + minuti + "<br>Secondi: " +secondi;
+
+       
+    </script>
+    
+</body>
+</html>
