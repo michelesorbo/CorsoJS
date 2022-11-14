@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le funzioni in JS</title>
+</head>
+<body>
+    <h1>Le Funzioni in JavaScript</h1>
+    <!-- <button id="btn" onclick="saluta()">Cliccami e ti saluto</button> -->
+    <button id="btn">Cliccami e ti saluto</button>
+    <input type="text" id="nome">
+    <button id="btn2">Ti saluto con il tuo nome</button>
+    <script>
+
+        const btn = document.querySelector("#btn")
+        const btn2 = document.querySelector("#btn2")
+        const nome = document.querySelector("#nome")
+
+        //Scrivo la funzione ma non viene richiamata nel codice
+        //Funzione senza parametri
+        function saluta(){
+            alert("Ciao dalla funzione saluta")
+        }
+
+        //Richiamo la funzione senza evento
+        // saluta()
+        // saluta()
+        // saluta()
+
+        btn.addEventListener("click", saluta)
+
+        //Funzione con parametri
+        function saluto_nome(nome){
+            alert("Ciao da " + nome)
+        }
+
+        btn2.addEventListener("click", () => {
+            //saluto_nome(nome.value)
+            //controllaInput(nome.value)
+            controllaInput("Michele")
+        })
+
+        function controllaInput(input){
+            if(input.length > 3){
+                alert("ok")
+            }
+        }
+
+        let a = 3, b = 4
+        function somma(a, b){
+            alert(a + b)
+        }
+
+        somma(a,b)
+        
+
+    </script>
+</body>
+</html>
