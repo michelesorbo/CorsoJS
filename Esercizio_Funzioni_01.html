@@ -22,6 +22,7 @@
         const inp_2 = document.querySelector("#inp_2")
         const btn_1 = document.querySelector("#btn_1")
         const btn_2 = document.querySelector("#btn_2")
+        const btn_3 = document.querySelector("#btn_3")
         const ris = document.querySelector("#risultato")
 
         function somma(a, b){
@@ -32,12 +33,18 @@
             return a - b
         }
 
+        //Per la divisione controllare se uno dei parametri è uguale a 0
+
         btn_1.addEventListener("click", ()=>{
             ris.innerHTML = "La somma è: "+ somma(Number(inp_1.value), Number(inp_2.value))
         })
 
         btn_2.addEventListener("click", ()=> {
             ris.innerHTML = "Il risultato della Sottrazione è: " + sottrazione(Number(inp_1.value), Number(inp_2.value))
+        })
+
+        btn_3.addEventListener("click", function(e){
+            console.log(e.target.value)
         })
     </script>
 </body>

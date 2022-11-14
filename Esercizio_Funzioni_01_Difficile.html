@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funzioni 2</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="inp_1">
+        <input type="text" id="inp_2">
+        <button>+</button>
+        <button>-</button>
+        <button>X</button>
+        <button>:</button>
+        <button>Francesco</button>
+        <p id="risultato">Faccio apparire il risultato</p>
+    </div>
+    
+    <script>
+        const inp_1 = document.querySelector("#inp_1")
+        const inp_2 = document.querySelector("#inp_2")
+        const btns = document.querySelectorAll("button")
+        const ris = document.querySelector("#risultato")
+
+        function somma(a, b){
+            return a + b
+        }
+
+        function sottrazione(a, b){
+            return a - b
+        }
+
+        btns.forEach(el => {
+            //console.log(el.textContent) //Legge tutti i testi dei pulsanti
+            el.addEventListener("click", ()=>{
+                console.log(el.textContent)
+                if(el.textContent == "+"){
+                    ris.innerHTML = "La somma è: "+ somma(Number(inp_1.value), Number(inp_2.value))
+                }else if(el.textContent == "-"){
+                    ris.innerHTML = "Il risultato della Sottrazione è: " + sottrazione(Number(inp_1.value), Number(inp_2.value))
+                }else if(el.textContent == "Francesco"){
+                    ris.innerHTML = "Categoria Francesco"
+                }else{
+                    ris.innerHTML = "Non Valido"
+                }
+            })
+        })
+    </script>
+</body>
+</html>
