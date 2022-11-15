@@ -10,25 +10,29 @@
 <body>
     <div class="reg-box">
         <h2>Register</h2>
-        <form>
+        <form name="form-app">
             <div class="user-box">
                 <input type="text" name="username" id="username">
                 <label>Username</label>
+                <p id="error_user" class="error">Errore</p>
             </div>
 
             <div class="user-box">
                 <input type="text" name="email" id="email">
                 <label>Email</label>
+                <p id="error_mail" class="error">Errore</p>
             </div>
 
             <div class="user-box">
                 <input type="password" name="pwd1" id="pwd1">
                 <label>Password</label>
+                <p id="error_pwd" class="error">Errore</p>
             </div>
 
             <div class="user-box">
                 <input type="password" name="pwd2" id="pwd2">
                 <label>Password controllo</label>
+                <p id="error" class="error">Errore</p>
             </div>
 
             <div class="button-form">
@@ -41,5 +45,7 @@
             </div>
         </form>
     </div>
+
+    <script src="js/Registerform.js"></script>
 </body>
 </html>

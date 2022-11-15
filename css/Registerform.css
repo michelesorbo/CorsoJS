@@ -7,6 +7,7 @@
     --color-label: #8F7CEC;
 }
 
+
 * {
     box-sizing: border-box;
 }
@@ -26,6 +27,14 @@ body{
     background: var(--bd-sfondo2);
     box-shadow: 0 15px 25 rgba(143, 124, 236, 0.7);
     border-radius: 10px;
+}
+
+.error{
+    display: none;
+    position: absolute;
+    margin-top: -45px;
+    color: red;
+    font-size: 8px;
 }
 
 .reg-box h2{
@@ -59,7 +68,8 @@ body{
     transition: .5s;
 }
 
-.reg-box .user-box input:focus~label {
+.reg-box .user-box input:focus~label,
+.reg-box .user-box input:valid~label {
     top: -85px;
     left: 0;
     color: var(--color-label);
