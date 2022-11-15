@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I form</title>
+    <style>
+        div{
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <form method="get" action="form2.html" enctype="multipart/form-data">
+        <!-- <table>
+            <tr>
+                <td>Nome</td>
+                <td><input type="text" name="nome"></td>
+            </tr>
+
+            <tr>
+                <td>Cognome</td>
+                <td><input type="text" name="cognome"></td>
+            </tr>
+
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="pwd"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><input type="submit" value="Registrati"></td>
+            </tr>
+        </table> -->
+
+        <div><!-- DIV Contenitore-->
+            <label for="nome">Inserisci il nome <sup>*</sup></label><!-- Etichetta di input-->
+            <input type="text" name="nome" required>
+        </div>
+
+        <div><!-- DIV Contenitore-->
+            <label for="cognome">Inserisci il Cognome</label><!-- Etichetta di input-->
+            <input type="text" name="cognome" placeholder="inserisci il cognome">
+        </div>
+
+        <div><!-- DIV Contenitore-->
+            <label for="pwd">Inserisci la Password</label><!-- Etichetta di input-->
+            <input type="password" name="pwd">
+        </div>
+
+        <div><!-- DIV Contenitore-->
+            <label for="email">Inserisci la Mail</label><!-- Etichetta di input-->
+            <input type="email" name="email">
+        </div>
+
+        <div>
+            <label for="cap">Inserisci CAP</label>
+            <input type="text" name="cap" maxlength="5" minlength="5">
+        </div>
+
+        <div>
+            <label for="commento">Inserisci un commento</label>
+            <textarea name="commento" rows="4" cols="50"></textarea>
+        </div>
+
+        <div>
+            <label for="veicolo">Che guidi guidi?</label>
+            <select name="veicolo">
+                <optgroup label="Auto">
+                    <option value="1">Fiat</option>
+                    <option value="2">BMW</option>
+                    <option>Audi</option>
+                    <option>Toyota</option>
+                </optgroup>
+                <optgroup label="Moto">
+                    <option>Ducati</option>
+                    <option>Piaggio</option>
+                    <option>Suzuki</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div>
+            <label for="primo">Scegli un primo</label><br>
+            <input type="radio" name="primo" value="carne">Carne<br>
+            <input type="radio" name="primo" value="pesce">Pesce<br>
+            <input type="radio" name="primo" value="mozzarella">Mozzarella
+        </div>
+
+        <div>
+            <label for="secondo">Scegli un secondo</label><br>
+            <input type="radio" name="secondo" value="carne">Carne<br>
+            <input type="radio" name="secondo" value="pesce">Pesce<br>
+            <input type="radio" name="secondo" value="mozzarella">Mozzarella
+        </div>
+
+        <div>
+            <label for="veicoli">Quali veicoli possiedi</label><br>
+            <input type="checkbox" name="veicoli[]" value="bici">Bicicletta<br>
+            <input type="checkbox" name="veicoli[]" value="auto">auto<br>
+            <input type="checkbox" name="veicoli[]" value="moto">Moto<br>
+            <input type="checkbox" name="veicoli[]" value="scooter">Scooter<br>
+            <input type="checkbox" name="veicoli[]" value="scarpe">Scarpe
+        </div>
+
+        <div>
+            <label>Allega un file</label>
+            <input type="file" name="file" accept=".pdf, image/*">
+            <!-- 
+                - per accettare tutti i tipi di immagine image/*
+                - per accettare solo un tipo di immagine image/tipo immagina es: image/png
+                - Lo stesso vale per i video
+                - per accettare file es: Word, PDF, Excel si deve specificare l'estensione 
+                es: Word = .doc o .docx - PDF = .pdf
+            -->
+        </div>
+
+        <!-- I campi data e ora-->
+        <div>
+            <label>Inserisci la data di nascita</label>
+            <input type="date" name="dataNascita" min="2022-03-11" max="2022-12-05">
+        </div>
+
+        <div>
+            <label>Inserire data e ora della prenotazione</label>
+            <input type="datetime-local" name="prenotazione">
+        </div>
+
+        <div>
+            <label>Inserisci ora prenotazione</label>
+            <input type="time" name="ora">
+        </div>
+
+
+        <div>
+            *campi richiesti
+        </div>
+
+        <div>
+            <input type="submit" value="Invia Modulo"> <input type="reset">
+        </div>
+    </form>
+    
+</body>
+</html>

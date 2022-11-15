@@ -10,4 +10,5 @@ Conrollare che la password e la password di conferma siano uguali
 Per il css creare una regola per visualizzare l'errore sotto la line bianca
 Se non si riesce usare alert
 
+Tutto deveaccadere qundo premo Registrati
 */
