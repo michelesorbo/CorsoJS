@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinamic Form</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/dinamicForm.css">
+</head>
+<body>
+
+    <form method="post" action="#">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" autocomplete="off">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" autocomplete="off">
+
+        <div class="container">
+            <button type="submit" id="connect" class="button type3">
+                <span>Connect</span>
+            </button>
+            <i class="fa fa-spinner" id="spinner" aria-hidden="true"></i>
+            <i class="fa fa-check" id="check" aria-hidden="true"></i>
+        </div>
+    </form>
+    
+    <script src="js/dinamicForm.js"></script>
+</body>
+</html>

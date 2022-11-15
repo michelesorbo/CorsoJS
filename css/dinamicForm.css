@@ -1,0 +1,105 @@
+body{
+    background-color: #2A2734;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+label{
+    width: 211px;
+    height: 34px;
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFB870;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+input{
+    box-sizing: border-box;
+    width: 326px;
+    height: 35px;
+    background: #9A86FD;
+    border: 1px solid #000;
+    box-shadow: 0px 4px 4px rgba(0, 0 , 0, 0.25);
+    border-radius: 25px;
+    transition: all 0.5s;
+    padding-left: 5%;
+    color: white;
+}
+
+input:focus{
+    outline: none;
+    box-shadow: 0px 0px 15px #FFB870;
+}
+
+button{
+    display: none;
+    width: 40px;
+    height: 100%;
+    background: #9A86FD;
+    border-radius: 25px;
+    color: white;
+    border: 0;
+    margin-left: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0 , 0, 0.25);
+    transition: all 0.5s;
+}
+
+button:hover {
+    box-shadow: 0px 0px 15px #FFB870;
+}
+
+.container{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+}
+
+.fa-spinner{
+    width: 20px;
+    font-size: larger;
+    margin: auto;
+    color: #FFB870;
+    animation: spin 2s infinite;
+}
+
+@keyframes spin{
+    from {
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+#check {
+    display: none;
+    width: 20px;
+    font-size: large;
+    margin: auto;
+    color: green;
+}
+
+.valid{
+    display: block;
+    animation: valid 1s forwards;
+}
+
+@keyframes valid {
+    from{
+        width: 40px;
+    }to{
+        width: 100px;
+    }
+}
